@@ -12,15 +12,16 @@ then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-brew tap homebrew/versions
-brew tap homebrew/dupes
-brew tap Goles/battery
+# Don't need any of these
+# brew tap homebrew/versions
+# brew tap homebrew/dupes
+# brew tap Goles/battery
 
 # Make sure we’re using the latest Homebrew
 brew update
 
 # Upgrade any already-installed formulae
-brew upgrade --all
+brew upgrade
 
 # Install the Homebrew packages I use on a day-to-day basis.
 #
@@ -44,32 +45,23 @@ brew upgrade --all
 # which version I'm using.
 
 apps=(
-    rvm
-    nvm
-    mongodb
+    node
+    yarn
+    svn
     bash-completion2
     coreutils
     moreutils
     findutils
-    ffmpeg
-    fortune
-    ponysay
     git
     git-extras
     hub
     gnu-sed --with-default-names
     grep --with-default-names
-    homebrew/completions/brew-cask-completion
-    homebrew/dupes/grep
-    homebrew/dupes/openssh
-    mtr
-    autojump
-    imagemagick --with-webp
+    openssh
     python
     source-highlight
     the_silver_searcher
     tree
-    ffmpeg --with-libvpx
     wget
     wifi-password
 )

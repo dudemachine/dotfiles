@@ -2,42 +2,39 @@
 
 # Install Caskroom
 brew tap caskroom/cask
-brew install brew-cask
 brew tap caskroom/versions
 
 # Install packages
 apps=(
-    1password
-    gyazo
-    dropbox
-    google-drive
-    spectacle
-    flux
-    dash
-    imagealpha
-    imageoptim
-    evernote
-    iterm2
-    atom
-    webstorm
-    firefox
-    firefoxnightly
-    google-chrome
-    google-chrome-canary
-    malwarebytes-anti-malware
-    glimmerblocker
-    hammerspoon
-    kaleidoscope
-    macdown
-    opera
-    screenflow
-    spotify
-    skype
-    slack
-    tower
-    transmit
-    elmedia-player
-    utorrent
+  java
+  textmate
+  visual-studio-code
+  visual-studio
+  istat-menus
+  appcleaner
+  alfred
+  cornerstone
+  vmware-fusion
+  dbvisualizer
+  microsoft-office
+  gyazo
+  dropbox
+  spectacle
+  dash
+  iterm2
+  evernote
+  atom
+  webstorm
+  firefox
+  firefoxnightly
+  google-chrome
+  google-chrome-canary
+  kaleidoscope
+  opera
+  spotify
+  skype
+  tower
+  transmit
 )
 
 brew cask install "${apps[@]}"
