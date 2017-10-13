@@ -237,15 +237,8 @@ main() {
   ln -fs $HOME/dotfiles/bin $HOME
 
   declare -a BINARIES=(
-    'batcharge.py'
     'crlf'
-    'dups'
     'git-delete-merged-branches'
-    'nyan'
-    'passive'
-    'proofread'
-    'ssh-key'
-    'weasel'
   )
 
   for i in ${BINARIES[@]}; do
@@ -318,18 +311,18 @@ main
 ###############################################################################
 
 # Copy over Atom configs
-#cp -r atom/packages.list $HOME/.atom
+cp -r atom/packages.list $HOME/.atom
 
 # Install community packages
-#apm list --installed --bare - get a list of installed packages
-#apm install --packages-file $HOME/.atom/packages.list
+# apm list --installed --bare - get a list of installed packages
+# apm install --packages-file $HOME/.atom/packages.list
 
 ###############################################################################
 # Zsh                                                                         #
 ###############################################################################
 
 # Install Zsh settings
-ln -s ~/dotfiles/zsh/themes/nick.zsh-theme $HOME/.oh-my-zsh/themes
+# ln -s ~/dotfiles/zsh/themes/nick.zsh-theme $HOME/.oh-my-zsh/themes
 
 
 ###############################################################################

@@ -64,6 +64,8 @@ apps=(
     tree
     wget
     wifi-password
+    fortune
+    ponysay
 )
 
 brew install "${apps[@]}"

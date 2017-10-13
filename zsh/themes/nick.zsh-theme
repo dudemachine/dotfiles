@@ -126,7 +126,8 @@ build_prompt() {
   prompt_end
 }
 
-RPROMPT='$(prompt_online) $(battery_charge)'
+# RPROMPT='$(prompt_online) $(battery_charge)'
+RPROMPT='$(prompt_online)'
 
 PROMPT='%{%f%b%k%}$(build_prompt)
 » '

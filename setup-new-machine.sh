@@ -27,6 +27,8 @@ cp -R ~/Documents ~/migration
 cp ~/.bash_history ~/migration # back it up for fun?
 cp ~/.gitconfig.local ~/migration
 cp ~/.z ~/migration # z history file.
+cp -R ~/.atom ~/migration/home
+
 
 # sublime text settings
 cp "~/Library/Application Support/Sublime Text 3/Packages" ~/migration
@@ -102,7 +104,7 @@ npm install -g trash-cli
 
 # github.com/jamiew/git-friendly
 # the `push` command which copies the github compare URL to my clipboard is heaven
-bash < <( curl https://raw.github.com/jamiew/git-friendly/master/install.sh)
+# bash < <( curl https://raw.github.com/jamiew/git-friendly/master/install.sh)
 
 
 ###############################################################################
@@ -112,8 +114,8 @@ bash < <( curl https://raw.github.com/jamiew/git-friendly/master/install.sh)
 # github.com/rupa/z - hooked up in .zshrc
 # consider reusing your current .z file if possible. it's painful to rebuild :)
 # or use autojump instead https://github.com/wting/autojump
-git clone https://github.com/rupa/z.git ~/z
-chmod +x ~/z/z.sh
+# git clone https://github.com/rupa/z.git ~/z
+# chmod +x ~/z/z.sh
 
 
 # my magic photobooth symlink -> dropbox. I love it.
@@ -125,14 +127,14 @@ chmod +x ~/z/z.sh
 
 
 # for the c alias (syntax highlighted cat)
-sudo easy_install Pygments
+# sudo easy_install Pygments
 
 
 ###############################################################################
 # Atom                                                                        #
 ###############################################################################
 
-ln -s /Applications/Atom.app/Contents/Resources/app/atom.sh /usr/local/bin/atom
+# ln -s /Applications/Atom.app/Contents/Resources/app/atom.sh /usr/local/bin/atom
 
 
 ###############################################################################
