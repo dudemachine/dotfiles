@@ -18,10 +18,10 @@ fi
 # brew tap Goles/battery
 
 # Make sure we’re using the latest Homebrew
-brew update
+brew upgrade
 
 # Upgrade any already-installed formulae
-brew upgrade
+# brew upgrade --all
 
 # Install the Homebrew packages I use on a day-to-day basis.
 #
@@ -64,8 +64,8 @@ apps=(
     tree
     wget
     wifi-password
-    fortune
-    ponysay
+    # fortune
+    # ponysay
 )
 
 brew install "${apps[@]}"

@@ -6,20 +6,15 @@ declare -a dirs_to_prepend
 dirs_to_prepend=(
   "/usr/bin"
   "/usr/local/sbin"
-  "/usr/local/git/bin"
   "/usr/local/"
-  "/usr/local/mysql/bin"
-  "/sw/bin/"
   "$HOME/dotfiles/bin"
   "$HOME/bin"
-  "$HOME/.rvm/bin"
-  "$(brew --prefix ruby)/bin"
   "$(brew --prefix coreutils)/libexec/gnubin" # Add brew-installed GNU core utilities bin
-  "$(brew --prefix)/share/npm/bin" # Add npm-installed package bin
 )
 
 # Explicitly configured $PATH
 PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+# PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/dotfiles/bin:$HOME/bin:$(brew --prefix coreutils)/libexec/gnubin"
 
 for dir in ${(k)dirs_to_prepend[@]}
 do
@@ -100,4 +95,4 @@ source $ZSH/oh-my-zsh.sh
 . <(npm completion)
 
 # fortune: brew install fortune ponysay
-fortune | ponysay
+# fortune | ponysay

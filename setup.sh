@@ -237,6 +237,7 @@ main() {
   ln -fs $HOME/dotfiles/bin $HOME
 
   declare -a BINARIES=(
+    'batcharge.py'
     'crlf'
     'git-delete-merged-branches'
   )
@@ -296,33 +297,33 @@ install_zsh () {
 
 # Package managers & packages
 
-# . "$DOTFILES_DIR/install/brew.sh"
-# . "$DOTFILES_DIR/install/npm.sh"
+. "$DOTFILES_DIR/install/brew.sh"
+. "$DOTFILES_DIR/install/npm.sh"
 
-# if [ "$(uname)" == "Darwin" ]; then
-    # . "$DOTFILES_DIR/install/brew-cask.sh"
-# fi
+if [ "$(uname)" == "Darwin" ]; then
+    . "$DOTFILES_DIR/install/brew-cask.sh"
+fi
 
 main
-# install_zsh
+install_zsh
 
 ###############################################################################
 # Atom                                                                        #
 ###############################################################################
 
 # Copy over Atom configs
-cp -r atom/packages.list $HOME/.atom
+#cp -r atom/packages.list $HOME/.atom
 
 # Install community packages
-# apm list --installed --bare - get a list of installed packages
-# apm install --packages-file $HOME/.atom/packages.list
+#apm list --installed --bare - get a list of installed packages
+#apm install --packages-file $HOME/.atom/packages.list
 
 ###############################################################################
 # Zsh                                                                         #
 ###############################################################################
 
 # Install Zsh settings
-# ln -s ~/dotfiles/zsh/themes/nick.zsh-theme $HOME/.oh-my-zsh/themes
+ln -s ~/dotfiles/zsh/themes/nick.zsh-theme $HOME/.oh-my-zsh/themes
 
 
 ###############################################################################
@@ -339,4 +340,5 @@ open "${HOME}/dotfiles/iterm/themes/Solarized Dark.itermcolors"
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
 # Reload zsh settings
-source ~/.zshrc
+# source ~/.zshrc
+zsh ~/.zshrc

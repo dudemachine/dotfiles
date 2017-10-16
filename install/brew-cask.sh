@@ -6,23 +6,17 @@ brew tap caskroom/versions
 
 # Install packages
 apps=(
-  java
-  textmate
-  visual-studio-code
-  visual-studio
-  istat-menus
-  appcleaner
-  alfred
-  cornerstone
-  vmware-fusion
-  dbvisualizer
-  microsoft-office
+  # 1password
   gyazo
   dropbox
+  # google-drive
   spectacle
+  # flux
   dash
-  iterm2
+  # imagealpha
+  # imageoptim
   evernote
+  iterm2
   atom
   webstorm
   firefox
@@ -35,6 +29,20 @@ apps=(
   skype
   tower
   transmit
+  # elmedia-player
+  # utorrent
+
+  java
+  textmate
+  visual-studio-code
+  visual-studio
+  istat-menus
+  appcleaner
+  alfred
+  cornerstone
+  vmware-fusion
+  dbvisualizer
+  microsoft-office
 )
 
 brew cask install "${apps[@]}"
