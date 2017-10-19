@@ -12,10 +12,12 @@
     showInvisibles: true
   "exception-reporting":
     userId: "20040300-424f-4097-b25f-904d24d3d0fd"
+  "git-plus":
+    general: {}
   "linter-ui-default":
     showPanel: true
   "tree-view":
-    hideVcsIgnoredFiles: true
+    autoReveal: true
   welcome:
     showOnStartup: false
   whitespace:
