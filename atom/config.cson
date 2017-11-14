@@ -1,30 +1,13 @@
 "*":
-  "atom-beautify":
-    general:
-      beautifyEntireFileOnSave: false
-    json:
-      brace_style: "end-expand"
-      keep_array_indentation: true
-      keep_function_indentation: true
   core:
     telemetryConsent: "no"
   editor:
     showInvisibles: true
   "exception-reporting":
-    userId: "20040300-424f-4097-b25f-904d24d3d0fd"
-  "git-plus":
-    general: {}
+    userId: "57630fb9-2935-4ef4-a8c2-b75f2619b06a"
   "linter-ui-default":
     showPanel: true
-  "tree-view":
-    autoReveal: true
   welcome:
     showOnStartup: false
   whitespace:
     ensureSingleTrailingNewline: false
-".source.ts":
-  editor:
-    showIndentGuide: true
-".source.tsx":
-  editor:
-    showIndentGuide: true
