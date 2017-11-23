@@ -263,3 +263,5 @@
 [user]
 	name = Martin Steffner
 	email = martin@nextgen.net
+[http]
+[https]

@@ -1,4 +1,7 @@
 "*":
+  "atom-beautify":
+    json:
+      brace_style: "expand"
   core:
     telemetryConsent: "no"
   editor:

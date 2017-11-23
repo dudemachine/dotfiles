@@ -178,6 +178,7 @@ declare -a FILES_TO_SYMLINK=(
   'shell/bash_prompt'
   'shell/bashrc'
   'shell/zshrc'
+  'shell/zshrc.local'
   'shell/ackrc'
   'shell/curlrc'
   'shell/gemrc'
