@@ -1,5 +1,5 @@
 export NO_PROXY=127.0.0.1,localhost,.nextgen.net
-export PROXY="http://nc.proxy.nextgen.net:8000"
+export PROXY="http://ns.proxy.nextgen.net:8000"
 
 alias proxyon="export HTTP_PROXY=$PROXY;export HTTPS_PROXY=$PROXY;export http_proxy=$PROXY;export https_proxy=$PROXY;npm config set proxy $PROXY;npm config set https-proxy $PROXY;apm config set https-proxy $PROXY;git config --global http.proxy $PROXY;git config --global https.proxy $PROXY"
 alias proxyoff='unset HTTP_PROXY;unset HTTPS_PROXY;unset http_proxy;unset https_proxy;npm config delete proxy;npm config delete https-proxy;git config --global --unset http.proxy;git config --global --unset https.proxy;apm config delete proxy;apm config delete https-proxy;'

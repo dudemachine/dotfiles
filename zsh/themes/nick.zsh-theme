@@ -86,13 +86,14 @@ prompt_git() {
   fi
 }
 
-function prompt_online() {
-  if [[ -f ~/.offline ]]; then
-    echo $OFFLINE
-  else
-    echo $ONLINE
-  fi
-}
+# disable online offline icon on cli
+#function prompt_online() {
+#  if [[ -f ~/.offline ]]; then
+#    echo $OFFLINE
+#  else
+#    echo $ONLINE
+#  fi
+#}
 
 # Dir: current working directory
 prompt_dir() {
@@ -126,7 +127,7 @@ build_prompt() {
   prompt_end
 }
 
-RPROMPT='$(prompt_online) $(battery_charge)'
+# RPROMPT='$(prompt_online) $(battery_charge)'
 
 PROMPT='%{%f%b%k%}$(build_prompt)
 » '

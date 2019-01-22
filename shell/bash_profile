@@ -57,6 +57,8 @@ unset file;
 
 #   Set Paths
 #   ------------------------------------------------------------
+  export JAVA_HOME=$(/usr/libexec/java_home)
+  export PATH=$JAVA_HOME/jre/bin:$PATH
   export PATH="$PATH:/usr/local/bin/"
   export PATH="/usr/local/git/bin:/sw/bin/:/usr/local/bin:/usr/local/:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
 
@@ -109,3 +111,12 @@ mcd () { mkdir -p "$1" && cd "$1"; }        # mcd:          Makes new Dir and ju
 trash () { command mv "$@" ~/.Trash ; }     # trash:        Moves a file to the MacOS trash
 ql () { qlmanage -p "$*" >& /dev/null; }    # ql:           Opens any file in MacOS Quicklook Preview
 alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file on MacOS Desktop
+
+export NO_PROXY=127.0.0.1,localhost,.nextgen.net
+export PROXY="http://ns.proxy.nextgen.net:8000"
+
+alias proxyon="export HTTP_PROXY=$PROXY;export HTTPS_PROXY=$PROXY;export http_proxy=$PROXY;export https_proxy=$PROXY;npm config set proxy $PROXY;npm config set https-proxy $PROXY;apm config set https-proxy $PROXY;git config --global http.proxy $PROXY;git config --global https.proxy $PROXY"
+alias proxyoff='unset HTTP_PROXY;unset HTTPS_PROXY;unset http_proxy;unset https_proxy;npm config delete proxy;npm config delete https-proxy;git config --global --unset http.proxy;git config --global --unset https.proxy;apm config delete proxy;apm config delete https-proxy;'
+
+export NVM_DIR="$HOME/.nvm"
+  . "/usr/local/opt/nvm/nvm.sh"
